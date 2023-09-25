@@ -1,42 +1,74 @@
-
-
+/* globals.css */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
     h1, h2, h3, h4, h5 {
-        @apply font-heading my-6 font-bold 
+        @apply font-heading my-6 font-bold;
     }
-    h1{
-        @apply text-4xl
+    h1 {
+        @apply text-4xl;
     }
-    h2{
-        @apply text-3xl
+    h2 {
+        @apply text-3xl;
     }
-    h4{
-        @apply text-2xl
+    h3 {
+        @apply text-2xl;
     }
-    h4{
-        @apply text-xl
+    h4 {
+        @apply text-xl;
     }
-    h5{
-        @apply text-lg
+    h5 {
+        @apply text-lg;
     }
 
-    ul{
+    ul {
         list-style: disc;
     }
 
-    ol{
+    ol {
         list-style: decimal;
     }
-     ul ol{
+    ul ol {
         @apply my-4;
-     }
+    }
 
-     li{
+    li {
         @apply my-2;
-     }
+    }
+}
+
+
+
+/* Snackbar Styles */
+.snackbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text color */
+  padding: 16px;
+  z-index: 1000; /* Ensure it's above other elements */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Animation */
+.animate-slide-in-out {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* styles.css */
+body.dark {
+  background-color: #1a202c;
+  color: #ffffff;
+}
+
+.dark-mode-text {
+  color: #ffffff;
 }

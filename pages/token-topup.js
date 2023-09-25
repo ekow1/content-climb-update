@@ -8,7 +8,10 @@ function TokenTopUp() {
 
     const response = await fetch(`/api/addTokens` , {
       method : 'POST'
-    })
+    });
+     const json = await response.json();
+    console.log('Price :' , json)
+    window.location.href = json.session.url
   }
 
   return (

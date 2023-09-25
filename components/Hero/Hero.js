@@ -3,6 +3,7 @@
 import Image from "next/image"
 import blur from '../../public/blur.png'
 // import Typed from 'react-typed'
+import ReactTyped from "react-typed-component";
 import Link from "next/link"
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
 import Logo from "../Logo/Logo";
@@ -45,6 +46,11 @@ const Hero = () => {
     backSpeed={100}
     loop
     /> {" "} */}
+       <ReactTyped strings={[ 'Generate SEO-optimized blog posts in minutes.',
+            ' Proper workflow during content creation.',
+            'Get high-quality content , without sacrificing your time.',]} typeSpeed={60}   backSpeed={100}  loop className="font-body" />
+    <br />
+
  </h2>
  <div className="flex flex-col items-center mx-auto justify-center text-center pt-16 z-20 mt-5 gap-10">
  <Link href="/post/newpost">

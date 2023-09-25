@@ -48,14 +48,14 @@ export default function Post(props) {
     <div className="overflow-auto h-full font-body">
       <div className="max-w-screen-lg mx-auto py-3 px-20">
         <div className="text-xl font-heading font-bold  mt-6 py-2 px-10 bg-slate-200  flex items-center border-2 border-slate-900">
-          <div className="sm:flex-1">Title</div>
+          <div className="sm:flex-1 uppercase">Title</div>
           <button
             onClick={() => copyToClipboard(props.title, "Title")}
             className="mt-2 ml-80 px-4 text-white rounded-md"
           >
              <GrCopy size={25}   className=" text-slate-900 " />
           </button>
-          <div className="font-light text-sm">{copiedSection === "Title" && copyStatus}</div>
+          <div className="font-light text-sm ">{copiedSection === "Title" && copyStatus}</div>
         </div>
         <div>
           <div className="font-heading font-black text-2xl  px-4 py-5 mb-16 border-2 border-slate-900 border-t-0" >
@@ -63,8 +63,8 @@ export default function Post(props) {
           </div>
         </div>
 
-        <div className=" font-bold  font-heading text-xl mt-6 py-2 px-10 bg-slate-200  flex  justify-center  items-center border-2 border-slate-900">
-          <div className="sm:flex-1">Meta Description</div>
+        <div className=" font-bold  font-heading text-xl mt-6 py-2 px-10 bg-slate-200  flex  justify-center  items-center border-2 border-slate-900 ">
+          <div className="sm:flex-1 uppercase">Meta Description</div>
           <button
             onClick={() => copyToClipboard(props.metaDescription, "Meta Description")}
             className="mt-2 ml-80 px-4 text-white rounded-md"
@@ -78,7 +78,7 @@ export default function Post(props) {
           {props.metaDescription}
         </div>
         <div className=" font-bold  font-heading text-xl mt-6 py-2 px-10 bg-slate-200  flex  justify-center  items-center border-2 border-slate-900">
-          <div className="sm:flex-1">Keywords</div>
+          <div className="sm:flex-1 uppercase">Keywords</div>
           <button
             onClick={() => copyToClipboard(props.keywords, "Keywords")}
             className="mt-2 ml-80 px-4 text-white rounded-md"
@@ -88,14 +88,14 @@ export default function Post(props) {
           <div className="font-light text-sm">{copiedSection === "Keywords" && copyStatus}</div>
         </div>
 
-        <div className=" py-5 px-3 mb-16 border-2 border-slate-900 border-t-0 flex gap-5 text-white ">
+        <div className=" py-5 px-3 mb-16 border-2 border-slate-900 border-t-0 flex gap-5 text-slate-800 ">
           {props.keywords.split(",").map((keyword , i) =>(
-              <div key={i} className="bg-slate-800 py-2 flex items-center px-3 rounded-full text-md font-semi-bold font-body  ">  <FiHash />{keyword.trim()}</div>               
+              <div key={i} className=" py-2 flex  justify-center  items-center px-3 rounded-full text-md font-semi-bold font-body text-sm ">  <FiHash size={12} />{keyword.trim()}</div>               
           ))}
         </div>
 
         <div className="text-xl font-heading font-bold mt-14 py-2  px-10 bg-slate-200  border-2 border-slate-900 border-b-0 flex items-center">
-          <div className="sm:flex-1">Blog Content </div>
+          <div className="sm:flex-1 uppercase">Blog Content </div>
           <button
             onClick={() => copyToClipboard(props.postContent, "Blog Content")}
             className="mt-2 ml-80 px-4 text-white rounded-md"

@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import {UserProvider} from'@auth0/nextjs-auth0/client';
 import{Josefin_Sans , DM_Sans , Pacifico} from '@next/font/google'
 import {config} from '@fortawesome/fontawesome-svg-core'
+import { PostProvider } from '../context/postContext';
 config.autoAddCss = false;
 
 const josefinSans = Josefin_Sans({
@@ -30,12 +31,13 @@ function MyApp({ Component, pageProps }) {
 
   const getLayout = Component.getLayout || ((page)=> page)
   return ( <UserProvider>
+    <PostProvider>
    <main className={`${josefinSans.variable} ${dmSans.variable} ${pacifico.variable}`}>
    
       {getLayout(  <Component {...pageProps} /> , pageProps )}
 
    </main>
-  
+  </PostProvider>
    
      </UserProvider>)
 }
